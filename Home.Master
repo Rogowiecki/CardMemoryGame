@@ -1,0 +1,43 @@
+﻿
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Home.Master.cs" Inherits="CardMemoryGame.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main_page</title>
+    <link href="CSS/style.css" rel="stylesheet" />
+    <script src="Scripts/script.js"></script>
+
+</head>
+
+<body>
+    <form id="form1" runat="server">
+
+    <%-- Панель навигации --%>
+        <header class="nav_border"><h2 class="indexh2">Card Memory Game</h2>
+            <nav>
+                <ul class="nav_links">
+                    <asp:ContentPlaceHolder ID="NavigationContent" runat="server">
+                    </asp:ContentPlaceHolder>
+                </ul>
+            </nav>
+        </header>
+
+       <%-- Содержимое веб-страницы --%>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <asp:label runat="server" id="label"></asp:label>
+     <%-- Содержимое подвала --%>
+        <div runat="server" id="footer" class="footer">
+           
+        </div>
+        
+    </form>
+</body>
+</html>
